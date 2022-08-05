@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Amita:wght@700&family=Open+Sans:wght@400;700&family=Poppins:ital,wght@1,100;1,200;1,300&family=Roboto:wght@500&display=swap');
+
+:root{
+  --color-primary:#1e2b36;
+  --color-primary-variant: #0c207c;
+  --color-success: #0f202e;
+  --color-danger:#db3737;
+  --color-warning:#e0c738;
+  --color-dark: #2c303d;
+  --color-white:#fff;
+  --color-black:#000;
+  --color-bg: #f1f1f1;
+  --color-light: #f0eef6;
+  --color-gray:#98a4b3;
+
+  --card-border-radius:2rem;
+  --card-border-radius2:0.8rem;
+
+  --card-padding: 1.5rem;
+  --box-shadow: 0.2rem 3rem var(--color-light);
+  --padding:1.2rem;
+  --transition: all 0.3s ease-in-out;
+
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  border:none;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  font-size: 1.5rem;
+  background-color: var(--color-bg);
+  color: var(--color-dark);
+  overflow-x: hidden;
+}
+.container{
+  width: 90%;
+  margin: 0 auto;
+}
+img{
+  width: 100%;
+  display: block;
+}
+h1{
+  font-size: 2rem;
+  font-weight: 700;
+}
+h2{
+  font-size: 1.7rem;
+
+}
+h3{
+  font-size: 1.5rem;
+
+}
+h4{
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+h5{
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+a{
+  color: var(--color-dark);
+  font-size: 1.2rem;
+}
+p{
+  font-size: 1rem;
+}
+.danger{
+  color: var(--color-danger);
+}
+.dark{
+  color: var(--color-dark);
+}
+.btn{
+  border: 3px solid var(--color-danger);
+  color: var(--color-white);
+  font-size: 1.2rem;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: var(--transition);
+}
+.btn:hover {
+  background-color: rgba(0,0,0,0.8);
+  color:#fff;
+}
+
+/* =======navar========= */
+nav{
+  background-color: var(--color-black);
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+}
+.navbar .logo h2{
+   font-size: 2rem;
+}
+.navbar .logo {
+  color: var(--color-white);
+}
+.navbar .logo p{
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+}
+.menu{
+  display: flex;
+  align-items: center;
+}
+.menu a{
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--color-white);
+  padding:0 1.2rem;
+  position: relative;
+}
+.menu a::after {
+  content: "";
+  height:3px;
+  background-color: red;
+  width:0%;
+  bottom:-5px;
+  left:0;
+  position: absolute;
+  transition: all 0.3s cubic-bezier(0.65, -1.13, 0.3, 2.18);
+}
+.menu a:hover::after {
+  width: 100%;
+}
+
+/* ============header============ */
+header{
+  background-image: url(images/profile-1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.small-ad{
+  width: 100%;
+  font-size: 1.2rem;
+  background-color: var(--color-danger);
+  color: var(--color-white);
+  text-align: center;
+  padding: 1rem 0; 
+  position: absolute;
+  top:5.8rem;
+  position: sticky;
+  z-index: 9;
+} 
+
+.content{
+  position: relative;
+  top:15rem;
+}
+.content h3{
+  border-bottom: 3px solid var(--color-danger);
+  border-color: var(--color-danger);
+  width: 34%;
+  padding-bottom: 0.5rem;
+}
+.content h1{
+  font-size: 6.5rem;
+  font-weight: 800;
+  color: var(--color-white);
+}
+.content h2{
+  font-size: 2.7rem;
+  font-weight: 800;
+  color: var(--color-white);
+}
+.content p{
+  font-size: 1.2rem;
+  font-weight: 400;
+  word-spacing: 0.1rem;
+  color: #f1f1f1;
+  width: 25%;
+  text-align: justify;
+  padding:1rem 0;
+}
+.content a{
+  margin-top: 2rem;
+}
+.channel{
+    margin: 15rem 0;
+}
+.channel-reach{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap:3rem;
+
+  height:calc(16px * 20);
+  background-color: var(--color-danger);
+  color: var(--color-white);
+  border-radius: var(--card-border-radius);
+}
+.channel-reach h1{
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+.channel-reach h2{
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+.table{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  text-align: left;
+}
+/* ============COLLECTION============ */
+.collection{
+  margin:10rem 0;
+}
+.collect-head{
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+.table-part ul{
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.table-part h2{
+  font-weight: 500;
+  align-items: flex-start;
+}
+/* ============ABOUT============ */
+.about{
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  place-items: center;
+  position: relative;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+.about .left .profile-photo img{
+    width: 50%;
+    position: absolute;
+    border-radius: 0 1rem 1rem 0;
+    overflow: hidden;
+    top:10rem;
+    left:0rem;
+}
+.about .right .profile-photo{
+    width:60%;
+    height:600px;
+    border-radius:1rem 0 0 1rem;
+    position:absolute;
+    top:0;
+    right:0;
+    z-index: 3;
+    overflow: hidden;
+}
+ .about .right .about-me{
+  margin-top: 40rem;
+  padding-left:15rem;
+} 
+ .about-me h2{
+  font-size: 5rem ;
+ }
+
+ .about-me p{
+  width: 80%;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  text-align: justify;
+  letter-spacing: 0.1rem;
+ }
+ .about-btn{
+  color: var(--color-dark);
+  margin-top: 1rem;
+  border-color: var(--color-dark);
+ }
+/* ============ITEM ============ */
+.browse-item{
+  margin:10rem 0;
+ 
+}
+.browse-head{
+  font-size: 5rem;
+  margin:5rem 0;
+}
+.items{
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+place-items: center;
+gap:3rem;
+}
+.item{
+ background-color: var(--color-white);
+ border-radius: var(--card-border-radius);
+ padding: var(--padding);
+ text-align: center;
+ box-shadow: 10px 10px 15px #ebdada,
+             -5px -5px 10px #dcd9e2;
+}
+.item .card-photo img{
+  border-radius: var(--card-border-radius2);
+  height: 350px;
+  background-size: cover;
+  }
+.item h3{
+  padding:1rem;
+}
+.item p{
+  font-size: 1.2rem;
+   line-height: 1.6;
+   text-align: justify;
+}
+.item-btn{
+  color: var(--color-dark);
+  margin: 1.2rem 0;
+}
+/* ============CONTUCT============ */
+.contuct{
+  display:grid;
+  grid-template-columns: 50vw 50vw; 
+  place-items: center;
+  position: relative;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  overflow: hidden;
+  height: 90vh;
+}
+.contuct .left {
+  display: flex;
+  flex-direction: column;
+}
+.contuct .left .profile-photo img{
+  position: absolute;
+  left:0;
+  top:0rem;
+  border-radius: 0 1rem 1rem 0;
+  width: 60%;
+  height:600px;
+  overflow: hidden;
+  z-index: 10;
+}
+.contuct .right .profile-photo img{
+  position: absolute;
+  right:0;
+  top:10rem;
+  border-radius: 1rem 0 0 1rem;
+  width: 50%;
+  overflow: hidden;
+}
+.contuct-me{
+  margin-top: 35rem;
+  padding-left: 5rem;
+}
+.contuct-me h2{
+  font-size: 5rem;
+  margin-top: 1.5rem;
+}
+.contuct-me p{
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.8;
+  text-align: justify;
+  width: 80%;
+}
+/* ============EMAIL============ */
+.email{
+  margin:10rem 0;
+}
+.email-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:1rem;
+  height:calc(16px * 20) ;
+  background-color: var(--color-danger);
+  color: var(--color-white);
+  padding:var(--card-padding);
+  border-radius: var(--card-border-radius);
+}
+.e-submit{
+  display: flex;
+  gap:1rem;
+}
+.e-submit input[type="email"]{
+  width:25rem;
+  height:2.5rem;
+  outline: 0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+.e-submit input::placeholder{
+  color: rgb(82, 74, 74);
+}
+.e-submit input[type="submit"] {
+   font-size: 1.4rem;
+   font-weight: 500;
+   background-color: var(--color-dark);
+   color: var(--color-white);
+   border-radius: 0.2rem;
+   padding: 0 0.5rem;
+   cursor: pointer;
+
+}
+/* ============FOOTER============ */
+footer{
+  background-color: #000;
+}
+.footer-context{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(16px * 30);
+  gap:1rem;
+  color: var(--color-white);
+}
+.social-icon {
+  display: flex;
+  gap:1rem;
+  font-size: 1.8rem;
+
+}
